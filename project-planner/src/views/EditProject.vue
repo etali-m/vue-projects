@@ -1,0 +1,35 @@
+<template>
+  <form @submit.prevent="handleSubmit">
+      <label>Title</label>
+      <input type="text" v-model="title" required>
+      <label>Details :</label>
+      <textarea v-model="details" required></textarea>
+      <button>Update project</button>
+  </form>
+</template>
+
+<script>
+export default {
+  props: ['id'],
+  data() {
+    return {
+      title : '',
+      details : '',
+      uri: 'http://localhost:3000/projects/' + this.id,
+    }
+  },
+  mounted() {
+    fetch(this.uri)
+      .then(res => res.json())
+      .then(data => {
+        //on rempli les champs avec les valeurs de l'élément.
+        this.title = data.title
+        this.details = data.details
+      }).catch(err => console.log(err))
+  }
+}
+</script>
+
+<style>
+
+</style>

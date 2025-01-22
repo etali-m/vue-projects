@@ -1,4 +1,5 @@
 <template> 
+  <Navbar/>
   <router-view/>
 </template>
 
@@ -16,3 +17,11 @@ body {
   color: #555;
 }
 </style>
+
+<script>
+import Navbar from './components/Navbar.vue'
+
+export default {
+  components: {Navbar}
+}
+</script>
