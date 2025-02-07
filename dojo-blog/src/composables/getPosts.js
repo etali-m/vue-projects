@@ -6,6 +6,12 @@ const getPosts = () => {
 
     const load = async () => {
       try {
+        // simulate delay
+        //Le spinner défini va tourner pendant deux secondes en attendant que les données soients chargées.
+        await new Promise(resolve => {
+            setTimeout(resolve, 2000)
+        })
+
         let data = await fetch('http://localhost:3000/posts')
         if(!data.ok) {
           throw Error('no available data')
