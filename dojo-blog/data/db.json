@@ -27,6 +27,23 @@
       "tags": [
         "jm"
       ]
+    },
+    {
+      "id": "8d90",
+      "title": "BOnjour le monde",
+      "body": "Ce texte est utilisé par la grande majorité des nouveaux développeur lorsqu'il apprenent un langage de programmation",
+      "tags": [
+        "dev"
+      ]
+    },
+    {
+      "id": "f724",
+      "title": "Le monde de l'ia",
+      "body": "hELO FDSMJS MJ",
+      "tags": [
+        "ia",
+        "nlp"
+      ]
     }
   ]
 }
